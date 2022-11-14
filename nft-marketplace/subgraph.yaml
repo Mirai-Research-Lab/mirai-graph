@@ -1,0 +1,29 @@
+specVersion: 0.0.4
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: Marketplace
+    network: goerli
+    source:
+      address: "0x0f5bb242f5F060eE2B5ba1a0f129d5c04A07a454"
+      abi: Marketplace
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - BoughtItem
+        - ItemAdded
+        - ItemCancelled
+      abis:
+        - name: Marketplace
+          file: ./abis/Marketplace.json
+      eventHandlers:
+        - event: BoughtItem(indexed address,indexed address,address,indexed uint256,uint256)
+          handler: handleBoughtItem
+        - event: ItemAdded(indexed address,indexed uint256,uint256,indexed address)
+          handler: handleItemAdded
+        - event: ItemCancelled(indexed address,indexed address,indexed uint256)
+          handler: handleItemCancelled
+      file: ./src/marketplace.ts

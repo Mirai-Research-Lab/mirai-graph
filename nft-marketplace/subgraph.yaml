@@ -28,3 +28,37 @@ dataSources:
         - event: ItemCancelled(indexed address,indexed address,indexed uint256)
           handler: handleItemCancelled
       file: ./src/marketplace.ts
+  - kind: ethereum
+    name: IpfsNFT
+    network: goerli
+    source:
+      address: "0x14eF13c0867EDE19f61cFFDD70aaD407eB753B4f"
+      abi: IpfsNFT
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - ApprovalForAll
+        - Nft_Minted
+        - Nft_Requested
+        - OwnershipTransferred
+        - Transfer
+      abis:
+        - name: IpfsNFT
+          file: ./abis/IpfsNFT.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,indexed uint256)
+          handler: handleApproval
+        - event: ApprovalForAll(indexed address,indexed address,bool)
+          handler: handleApprovalForAll
+        - event: Nft_Minted(indexed address,indexed uint256)
+          handler: handleNft_Minted
+        - event: Nft_Requested(indexed uint256,indexed address,indexed uint256)
+          handler: handleNft_Requested
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+      file: ./src/IpfsNFT.ts

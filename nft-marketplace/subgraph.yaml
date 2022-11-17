@@ -34,7 +34,7 @@ dataSources:
     source:
       address: "0x5531258400C98645836aD2ff9f58addE8c0387Be"
       abi: IpfsNFT
-      startBlock: 7970986
+      startBlock: 7970840
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7

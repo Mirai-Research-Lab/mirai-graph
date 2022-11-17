@@ -9,8 +9,8 @@ import {
 import { Address, BigInt } from "@graphprotocol/graph-ts";
 import { Approval } from "../generated/schema";
 import { Approval as ApprovalEvent } from "../generated/IpfsNFT/IpfsNFT";
-import { handleApproval } from "../src/IpfsNFT";
-import { createApprovalEvent } from "./IpfsNFT-utils";
+import { handleApproval } from "../src/ipfsnft";
+import { createApprovalEvent } from "./ipfsnft-utils";
 
 // Tests structure (matchstick-as >=0.5.0)
 // https://thegraph.com/docs/en/developer/matchstick/#tests-structure-0-5-0

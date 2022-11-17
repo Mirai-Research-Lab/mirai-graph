@@ -7,7 +7,7 @@ import {
   Entity,
   Bytes,
   Address,
-  BigInt,
+  BigInt
 } from "@graphprotocol/graph-ts";
 
 export class BoughtItem extends ethereum.Event {
@@ -147,7 +147,7 @@ export class Marketplace extends ethereum.SmartContract {
       "getListingInfo(address,uint256):((uint256,address))",
       [
         ethereum.Value.fromAddress(nftAddress),
-        ethereum.Value.fromUnsignedBigInt(tokenId),
+        ethereum.Value.fromUnsignedBigInt(tokenId)
       ]
     );
 
@@ -165,7 +165,7 @@ export class Marketplace extends ethereum.SmartContract {
       "getListingInfo(address,uint256):((uint256,address))",
       [
         ethereum.Value.fromAddress(nftAddress),
-        ethereum.Value.fromUnsignedBigInt(tokenId),
+        ethereum.Value.fromUnsignedBigInt(tokenId)
       ]
     );
     if (result.reverted) {

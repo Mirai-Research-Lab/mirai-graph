@@ -3,8 +3,8 @@
     "Marketplace": {
       "address": "0x0234c1FFd886f461B1B5eF35C21F9096344F886c"
     },
-    "IpfsNFT": {
-      "address": "0x14eF13c0867EDE19f61cFFDD70aaD407eB753B4f"
+    "Contract": {
+      "address": "0x5531258400C98645836aD2ff9f58addE8c0387Be"
     }
   }
 }

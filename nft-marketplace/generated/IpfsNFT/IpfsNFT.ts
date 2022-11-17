@@ -158,9 +158,9 @@ export class Transfer__Params {
   }
 }
 
-export class IpfsNFT extends ethereum.SmartContract {
-  static bind(address: Address): IpfsNFT {
-    return new IpfsNFT("IpfsNFT", address);
+export class Contract extends ethereum.SmartContract {
+  static bind(address: Address): Contract {
+    return new Contract("Contract", address);
   }
 
   balanceOf(owner: Address): BigInt {
